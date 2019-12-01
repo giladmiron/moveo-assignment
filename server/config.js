@@ -1,3 +1,3 @@
-const BASE_URL = 'https://api.themoviedb.org/3/';
+const BASE_URL = 'https://www.timeanddate.com/weather';
 
 module.exports =  BASE_URL
