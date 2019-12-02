@@ -6,16 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moveo Assignment</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-
+    <div class="header">
+        <div class="search-area">
+            <div class="country-input">
+                <i class="fas fa-search"></i>
+                <input type="text" id="countryInput" placeholder="Country">
+            </div>
+            <div class="city-input">
+                <i class="fas fa-search"></i>
+                <input type="text" id="cityInput" placeholder="City">
+            </div>
+            <button id="submitBtn" class="clear-btn-style"><i class="far fa-check-circle"></i>
+            </button>
+        </div>
+    </div>
+    <div id="container">
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+
+    <script src="renderer.js"></script>
+    <script src="tempManager.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

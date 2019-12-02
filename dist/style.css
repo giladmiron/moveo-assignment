@@ -1,5 +1,150 @@
-.container{
-    width: 50px;
-    height: 50px;
-    background-color: black;
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgba(34, 70, 100, 0.842);
 }
+
+.header{
+    position: fixed;
+    width: 100vw;
+    height: 105px;
+    background: #1c1c1c;
+    box-sizing: border-box;
+    padding: 25px 20px 0px 20px;
+    color: #fff;
+}
+
+.search-area{
+    z-index: 100;
+}
+
+.search-area div{
+    display: inline-block;
+    width: 30%;
+    height: 55px;
+    background: #353535;
+    margin: 0 auto;
+    border-radius: 40px;
+    position: relative;
+    color: #fff;
+    margin-left: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.search-area div input{
+        font-family: sans-serif;
+        position: relative;
+        font-size: 28px;
+        margin: 10px;
+        padding: 0 0 0 60px;
+        box-sizing: border-box;
+        border: 0;
+        background: transparent;
+        height: 40px;
+        color: #fff;
+    } 
+    
+    .fa-search {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 20px;
+        color: #fff;
+      }
+    
+    .search-area input:focus {
+    outline: none;
+    }
+
+    .clear-btn-style{
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        text-decoration: underline;
+        text-decoration: none;
+    }
+
+    #submitBtn{
+        position: absolute;
+        right: 30px;
+        top:35px;
+        font-size: 30px;
+    }
+
+#container{
+    position: absolute;
+    top:115px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.city-weather{
+    background-color:rgba(34, 70, 100, 0.842);
+    font-family: 'open sans';
+    display: inline-block;
+    padding: 10px;
+    margin: 15px;
+    color: white;
+    text-align: center;
+    animation-name: appears;
+    animation-duration: 2s;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+h1{
+    color: black;
+}
+
+.fa-trash{
+    color: tomato;
+    font-size: 22px;
+}
+
+/* compatibility stuff */
+@media screen and (max-width: 900px) {
+    #container{
+      grid-template-columns: repeat(2,1fr);
+    }}
+    
+    @media screen and (max-width: 700px) {
+        .search-area div input{
+            font-size: 19px;
+            padding: 0 0 0 33px;
+        }
+        }
+    
+    @media screen and (max-width: 500px) {
+      #container{
+        grid-template-columns: 1fr;
+      }
+      .search-area div input{
+        font-size: 14px;
+        padding: 0 0 0 33px;
+    }
+
+   .search-area div{
+       width: 35%;
+   }
+
+    .fa-search{
+        font-size: 14px;
+        top:22px;
+    }}
+    
+    /* animations */
+    @keyframes appears {
+        from {
+          opacity: 0;
+        }
+        to {
+          opcaity: 1;
+        }
+      }
