@@ -1,5 +1,3 @@
-//save to storage
-//get data from local storage
 class TempManager {
     constructor() {
         this.data = []

@@ -8,7 +8,6 @@ $(window).ready(() => {
     handleSearch('hungary', 'budapest')
 })
 
-
 //event listeners
 $('#submitBtn').on('click', () => {
     let location = getSearchValues()
@@ -16,7 +15,7 @@ $('#submitBtn').on('click', () => {
 })
 
 $(document).keypress(function (event) {
-    if (event.keycode == 13) {
+    if (event.code == 'Enter') {
         let location = getSearchValues()
         handleSearch(location.country, location.city)
     }
@@ -42,7 +41,7 @@ function getSearchValues() {
 
 async function handleSearch(country, city) {
     let status = await tempManager.getWeather(country, city)
-    status ? renderer.renderData(tempManager.data) : alert('There is a problem - one or more of the fields are invalid or the location is already exists')
+    status ? renderer.renderData(tempManager.data) : alert('There is a problem - one or more of the fields is invalid or the location is already exists')
     //clear the inputs
     $('#countryInput').val('')
     $('#cityInput').val('')
