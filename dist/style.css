@@ -148,3 +148,12 @@ h1{
           opcaity: 1;
         }
       }
+
+      @keyframes removed {
+        from {
+          opacity: 1;
+        }
+        to {
+          opcaity: 0;
+        }
+      }
