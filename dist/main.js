@@ -1,20 +1,22 @@
 const renderer = new Renderer()
 const tempManager = new TempManager()
+const storage = new Storage()
 
 //loadpage function
-$(window).ready(() => {
-    handleSearch('israel', 'jerusalem')
-    handleSearch('germany', 'berlin')
-    handleSearch('hungary', 'budapest')
+$(window).ready(async () => {
+    let defaultLocations = storage.getDedaultLocations()
+    defaultLocations.forEach(location => {
+        handleSearch(location.country, location.city)
+    });
 })
 
 //event listeners
-$('#submitBtn').on('click', () => {
+$('#submitBtn').on('click', async () => {
     let location = getSearchValues()
     handleSearch(location.country, location.city)
 })
 
-$(document).keypress(function (event) {
+$(document).keypress(async function (event) {
     if (event.code == 'Enter') {
         let location = getSearchValues()
         handleSearch(location.country, location.city)
@@ -41,14 +43,17 @@ function getSearchValues() {
 
 async function handleSearch(country, city) {
     let status = await tempManager.getWeather(country, city)
-    status ? renderer.renderData(tempManager.data[tempManager.data.length-1]) : alert('There is a problem - one or more of the fields is invalid or the location is already exists')
+    status ? renderer.renderData(tempManager.data[tempManager.data.length - 1]) 
+    : alert('There is a problem - one or more of the fields is invalid or the location is already exists')
     //clear the inputs
     $('#countryInput').val('')
     $('#cityInput').val('')
+    storage.updateLocalStorage(tempManager.data)
 }
 
 function deleteCity(event) {
     let location = event.target.closest('div').dataset.city
     event.target.closest('div').remove()
     tempManager.deleteWeather(location)
+    storage.updateLocalStorage(tempManager.data)
 }
