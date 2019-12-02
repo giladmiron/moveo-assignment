@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color:rgba(34, 70, 100, 0.842);
+    background-color:rgba(34, 70, 100, 0.842)
 }
 
 .header{
@@ -74,8 +74,8 @@ body{
     }
 
     #submitBtn:hover{
-        color: rgb(81, 90, 105);
-    }
+        color:rgba(34, 70, 100, 0.842);
+      }
 
 #container{
     position: absolute;

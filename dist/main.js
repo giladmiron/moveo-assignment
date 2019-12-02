@@ -1,5 +1,5 @@
-const renderer = new Renderer
-const tempManager = new TempManager
+const renderer = new Renderer()
+const tempManager = new TempManager()
 
 //loadpage function
 $(window).ready(() => {
