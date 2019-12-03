@@ -86,6 +86,7 @@ body{
 }
 
 .city-weather{
+  position: relative;
     background-color:rgba(34, 70, 100, 0.842);
     font-family: 'open sans';
     padding: 10px;
@@ -97,6 +98,12 @@ body{
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.country-flag{
+  position: absolute;
+  left:0;
+  top:0;
 }
 
 h1{

@@ -17,7 +17,8 @@ router.get('/weather/:country/:city', (req, res) => {
             let humidity = $('#qfacts .four')[5].next.data
             let windSpeed = $('#qlook p')[1].children[5]? $('#qlook p')[1].children[5].prev.data : "unknown"
             let icon = $('#cur-weather').attr('src')
-            let weatherData = { country,city,title, temperature, humidity, windSpeed, icon }
+            let countryFlag = $('.pg-title img').attr('src')
+            let weatherData = { country,city,title, temperature, humidity, windSpeed, icon, countryFlag }
             res.send(weatherData)
         } else {
             res.end()
