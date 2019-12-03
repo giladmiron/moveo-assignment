@@ -4,6 +4,7 @@ body{
     background-color:rgba(34, 70, 100, 0.842)
 }
 
+/* ############# header #############  */
 .header{
     position: fixed;
     width: 100vw;
@@ -62,7 +63,6 @@ body{
         font: inherit;
         cursor: pointer;
         outline: inherit;
-        text-decoration: underline;
         text-decoration: none;
     }
 
@@ -76,7 +76,9 @@ body{
     #submitBtn:hover{
         color:rgba(34, 70, 100, 0.842);
       }
+      /* ############# end of header ############# */
 
+      /* ############# grid ############# */
 #container{
     position: absolute;
     top:115px;
@@ -114,8 +116,10 @@ h1{
     color: tomato;
     font-size: 22px;
 }
+/* ############# end of grid ############# */
 
-/* compatibility stuff */
+
+/* ############# compatibility  ############# */
 @media screen and (max-width: 900px) {
     #container{
       grid-template-columns: repeat(2,1fr);
@@ -144,9 +148,12 @@ h1{
     .fa-search{
         font-size: 14px;
         top:22px;
-    }}
+    }
+  }
+  /* ############# end of compatibilty  ############# */
+
     
-    /* animations */
+/* ############# animations  ############# */
     @keyframes appears {
         from {
           opacity: 0;
@@ -155,12 +162,4 @@ h1{
           opcaity: 1;
         }
       }
-
-      @keyframes removed {
-        from {
-          opacity: 1;
-        }
-        to {
-          opcaity: 0;
-        }
-      }
+/* ############# end of animations  ############# */

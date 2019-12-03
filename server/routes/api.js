@@ -9,6 +9,7 @@ const BASE_URL = require('../config')
 router.get('/weather/:country/:city', (req, res) => {
     let country = req.params.country
     let city = req.params.city
+    
     request(`${BASE_URL}/${country}/${city}`, (error, response, html) => {
         if (!error && response.statusCode == 200) {
             const $ = cheerio.load(html)
